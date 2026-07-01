@@ -113,8 +113,5 @@ public class Allocation {
 
 	public Allocation() {
 		
-	}
-	
-    
-    
+	}   
 }

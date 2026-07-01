@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.project.ERASM.entities.ResourceRequest;
 
 @Repository
-public interface ResourceRequestRepository extends JpaRepository<ResourceRequest, Integer> {
+public interface ResourceRequestRepository extends JpaRepository<ResourceRequest, Long> {
 
 }

@@ -30,7 +30,6 @@ public class AuditLog {
 
     private LocalDateTime timestamp;
 
-    private String ipAddress;
 
 	public Long getAuditId() {
 		return auditId;
@@ -88,16 +87,12 @@ public class AuditLog {
 		this.timestamp = timestamp;
 	}
 
-	public String getIpAddress() {
-		return ipAddress;
-	}
 
-	public void setIpAddress(String ipAddress) {
-		this.ipAddress = ipAddress;
-	}
+
+
 
 	public AuditLog(Long auditId, User user, String entityName, String entityId, String action, String description,
-			LocalDateTime timestamp, String ipAddress) {
+			LocalDateTime timestamp) {
 		this.auditId = auditId;
 		this.user = user;
 		this.entityName = entityName;
@@ -105,7 +100,7 @@ public class AuditLog {
 		this.action = action;
 		this.description = description;
 		this.timestamp = timestamp;
-		this.ipAddress = ipAddress;
+		
 	}
 
 	public AuditLog() {

@@ -21,8 +21,7 @@ public class Skill {
 
     private String category;
 
-    @Column(length = 500)
-    private String description;
+   
 
     @OneToMany(mappedBy = "skill",
             cascade = CascadeType.ALL,
@@ -53,13 +52,7 @@ public class Skill {
 		this.category = category;
 	}
 
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
+	
 
 	public List<EmployeeSkill> getEmployeeSkills() {
 		return employeeSkills;
@@ -69,12 +62,11 @@ public class Skill {
 		this.employeeSkills = employeeSkills;
 	}
 
-	public Skill(Long skillId, String skillName, String category, String description,
+	public Skill(Long skillId, String skillName, String category,  
 			List<EmployeeSkill> employeeSkills) {
 		this.skillId = skillId;
 		this.skillName = skillName;
 		this.category = category;
-		this.description = description;
 		this.employeeSkills = employeeSkills;
 	}
 

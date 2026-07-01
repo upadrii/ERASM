@@ -23,8 +23,7 @@ public class Certification {
 
     private String category;
 
-    @Column(length = 500)
-    private String description;
+   
 
     @OneToMany(mappedBy = "certification",
             cascade = CascadeType.ALL)
@@ -62,13 +61,7 @@ public class Certification {
 		this.category = category;
 	}
 
-	public String getDescription() {
-		return description;
-	}
-
-	public void setDescription(String description) {
-		this.description = description;
-	}
+	
 
 	public List<EmployeeCertification> getEmployeeCertifications() {
 		return employeeCertifications;
@@ -79,12 +72,11 @@ public class Certification {
 	}
 
 	public Certification(Long certificationId, String certificationName, String issuingOrganization, String category,
-			String description, List<EmployeeCertification> employeeCertifications) {
+		  List<EmployeeCertification> employeeCertifications) {
 		this.certificationId = certificationId;
 		this.certificationName = certificationName;
 		this.issuingOrganization = issuingOrganization;
 		this.category = category;
-		this.description = description;
 		this.employeeCertifications = employeeCertifications;
 	}
 

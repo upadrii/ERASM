@@ -20,7 +20,6 @@ public class Role {
     @Column(name = "role_name", nullable = false, unique = true)
     private String roleName;
 
-    private String description;
 
     @OneToMany(mappedBy = "role", fetch = FetchType.LAZY)
     private List<User> users = new ArrayList<>();
@@ -41,13 +40,7 @@ public class Role {
 		this.roleName = roleName;
 	}
 
-	public String getDescription() {
-		return description;
-	}
 
-	public void setDescription(String description) {
-		this.description = description;
-	}
 
 	public List<User> getUsers() {
 		return users;
@@ -57,10 +50,9 @@ public class Role {
 		this.users = users;
 	}
 
-	public Role(Long roleId, String roleName, String description, List<User> users) {
+	public Role(Long roleId, String roleName , List<User> users) {
 		this.roleId = roleId;
 		this.roleName = roleName;
-		this.description = description;
 		this.users = users;
 	}
 	public Role() {}

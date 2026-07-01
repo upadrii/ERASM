@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import com.project.ERASM.entities.EmployeeSkill;
 
 @Repository
-public interface EmployeeSkillRepository extends JpaRepository<EmployeeSkill, Integer> {
+public interface EmployeeSkillRepository extends JpaRepository<EmployeeSkill, Long> {
 
 }

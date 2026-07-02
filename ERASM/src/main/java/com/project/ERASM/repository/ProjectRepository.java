@@ -7,4 +7,5 @@ import com.project.ERASM.entities.Project;
 
 @Repository
 public interface ProjectRepository extends JpaRepository<Project, Long> {
+    boolean existsByProjectCode(String projectCode);
 }

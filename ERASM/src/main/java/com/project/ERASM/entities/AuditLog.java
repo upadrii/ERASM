@@ -30,7 +30,6 @@ public class AuditLog {
 
     private LocalDateTime timestamp;
 
-
 	public Long getAuditId() {
 		return auditId;
 	}
@@ -87,10 +86,6 @@ public class AuditLog {
 		this.timestamp = timestamp;
 	}
 
-
-
-
-
 	public AuditLog(Long auditId, User user, String entityName, String entityId, String action, String description,
 			LocalDateTime timestamp) {
 		this.auditId = auditId;
@@ -100,12 +95,14 @@ public class AuditLog {
 		this.action = action;
 		this.description = description;
 		this.timestamp = timestamp;
-		
 	}
 
 	public AuditLog() {
 		
 	}
+
+
+	
 	
     
 }
